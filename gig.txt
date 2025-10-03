@@ -1,0 +1,18 @@
+#include <stdio.h>
+void main() 
+{
+    float r;
+    printf("====  PROXIMITY FUZE SIMULATION  ====\n  Fuze arming sequence initiated...\n");
+    printf("  Taking inputs from radar... \n  Enter the current distance (meters) of warhead  from the target : ");
+scanf ("%f",&r);
+if (r<=25)
+{
+    printf("=====  *TARGET ACQUIRED*  =====\n  Distance:%f meters - WITHIN DETONATION RANGE",r);
+    printf("\n  Giving output to detonate the warhead...\n  Detonation sequence: 3... 2... 1...\n  Warhead detonated successfully!");
+}
+else
+{
+    printf("=====  *TARGET UNACQUIRED*  =====\n  Distance:%f meters - OUTSIDE DETONATION RANGE",r);
+ printf("\n  Insufficient distance!!! \n  Giving output to warhead... \n  Detonation delayed. Continuing tracking...");  
+}
+}
